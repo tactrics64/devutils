@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevUtils - Developer's Toolkit</title>
+    <meta name="description" content="A comprehensive collection of developer utilities for everyday coding tasks">
+    <link rel="icon" type="image/x-icon" href="icons/favicon.ico">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#2563eb">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">DevUtils</div>
+        <div class="search-container">
+            <input type="text" id="search-tools" placeholder="Search tools... (Press '/' to focus)">
+        </div>
+        <div class="nav-actions">
+            <div class="font-size-controls">
+                <button class="font-size-btn" data-size="small" title="Small Text">A</button>
+                <button class="font-size-btn" data-size="medium" title="Medium Text">A</button>
+                <button class="font-size-btn" data-size="large" title="Large Text">A</button>
+            </div>
+            <div class="shortcuts-btn" title="Keyboard Shortcuts (Press '?')">
+                <i class="fas fa-keyboard"></i>
+            </div>
+            <div class="theme-toggle">
+                <i class="fas fa-moon"></i>
+            </div>
+        </div>
+    </nav>
+
+    <div class="recent-tools">
+        <h2>Recent Tools</h2>
+        <div class="recent-tools-list">
+            <!-- Recent tools will be dynamically added here -->
+        </div>
+    </div>
+
+    <main class="container">
+        <div class="tools-grid">
+            <!-- Base64 Tool -->
+            <div class="tool-card" data-tool="base64">
+                <button class="favorite-btn" title="Add to favorites">
+                    <i class="far fa-star"></i>
+                </button>
+                <div class="tool-header">
+                    <i class="fas fa-exchange-alt"></i>
+                    <h3>Base64 Encoder/Decoder</h3>
+                </div>
+                <p>Convert text to and from Base64 encoding</p>
+            </div>
+
+            <!-- Hash Generator -->
+            <div class="tool-card" data-tool="hash">
+                <button class="favorite-btn" title="Add to favorites">
+                    <i class="far fa-star"></i>
+                </button>
+                <div class="tool-header">
+                    <i class="fas fa-key"></i>
+                    <h3>Hash Generator</h3>
+                </div>
+                <p>Generate MD5, SHA-1, SHA-256 hashes</p>
+            </div>
+
+            <!-- UUID Generator -->
+            <div class="tool-card" data-tool="uuid">
+                <button class="favorite-btn" title="Add to favorites">
+                    <i class="far fa-star"></i>
+                </button>
+                <div class="tool-header">
+                    <i class="fas fa-fingerprint"></i>
+                    <h3>UUID Generator</h3>
+                </div>
+                <p>Generate random UUIDs/GUIDs</p>
+            </div>
+
+            <!-- Lorem Ipsum Generator -->
+            <div class="tool-card" data-tool="lorem">
+                <button class="favorite-btn" title="Add to favorites">
+                    <i class="far fa-star"></i>
+                </button>
+                <div class="tool-header">
+                    <i class="fas fa-align-left"></i>
+                    <h3>Lorem Ipsum Generator</h3>
+                </div>
+                <p>Generate placeholder text</p>
+            </div>
+
+            <!-- String Tools -->
+            <div class="tool-card" data-tool="string">
+                <button class="favorite-btn" title="Add to favorites">
+                    <i class="far fa-star"></i>
+                </button>
+                <div class="tool-header">
+                    <i class="fas fa-text-width"></i>
+                    <h3>String Utilities</h3>
+                </div>
+                <p>Case conversion, length, reverse, etc.</p>
+            </div>
+
+            <!-- URL Encoder/Decoder -->
+            <div class="tool-card" data-tool="url">
+                <button class="favorite-btn" title="Add to favorites">
+                    <i class="far fa-star"></i>
+                </button>
+                <div class="tool-header">
+                    <i class="fas fa-link"></i>
+                    <h3>URL Encoder/Decoder</h3>
+                </div>
+                <p>Encode and decode URLs</p>
+            </div>
+            <!-- Text Analysis -->
+            <div class="tool-card" data-tool="textanalysis">
+                <button class="favorite-btn" title="Add to favorites">
+                    <i class="far fa-star"></i>
+                </button>
+                <div class="tool-header">
+                    <i class="fas fa-font"></i>
+                    <h3>Text Analysis</h3>
+                </div>
+                <p>Character/word counter, case converter</p>
+            </div>
+
+            <!-- Number Base Converter -->
+            <div class="tool-card" data-tool="baseconverter">
+                <button class="favorite-btn" title="Add to favorites">
+                    <i class="far fa-star"></i>
+                </button>
+                <div class="tool-header">
+                    <i class="fas fa-exchange-alt"></i>
+                    <h3>Number Base Converter</h3>
+                </div>
+                <p>Convert between binary, decimal, and hex</p>
+            </div>
+
+            <!-- JSON Formatter -->
+            <div class="tool-card" data-tool="jsonformatter">
+                <button class="favorite-btn" title="Add to favorites">
+                    <i class="far fa-star"></i>
+                </button>
+                <div class="tool-header">
+                    <i class="fas fa-code"></i>
+                    <h3>JSON Formatter</h3>
+                </div>
+                <p>Format and validate JSON data</p>
+            </div>
+
+            <!-- HTML Encoder -->
+            <div class="tool-card" data-tool="htmlencoder">
+                <button class="favorite-btn" title="Add to favorites">
+                    <i class="far fa-star"></i>
+                </button>
+                <div class="tool-header">
+                    <i class="fas fa-code"></i>
+                    <h3>HTML Entity Converter</h3>
+                </div>
+                <p>Encode/decode HTML entities</p>
+            </div>
+
+            <!-- Color Converter -->
+            <div class="tool-card" data-tool="colorconverter">
+                <button class="favorite-btn" title="Add to favorites">
+                    <i class="far fa-star"></i>
+                </button>
+                <div class="tool-header">
+                    <i class="fas fa-palette"></i>
+                    <h3>Color Format Converter</h3>
+                </div>
+                <p>Convert between RGB, HEX, and HSL</p>
+            </div>
+
+            <!-- Markdown Preview -->
+            <div class="tool-card" data-tool="markdown">
+                <button class="favorite-btn" title="Add to favorites">
+                    <i class="far fa-star"></i>
+                </button>
+                <div class="tool-header">
+                    <i class="fab fa-markdown"></i>
+                    <h3>Markdown Preview</h3>
+                </div>
+                <p>Live markdown preview with GitHub flavor</p>
+            </div>
+
+            <!-- CSS Minifier -->
+            <div class="tool-card" data-tool="cssminifier">
+                <button class="favorite-btn" title="Add to favorites">
+                    <i class="far fa-star"></i>
+                </button>
+                <div class="tool-header">
+                    <i class="fab fa-css3"></i>
+                    <h3>CSS Minifier</h3>
+                </div>
+                <p>Minify and format CSS code</p>
+            </div>
+
+            <!-- JWT Decoder -->
+            <div class="tool-card" data-tool="jwtdecoder">
+                <button class="favorite-btn" title="Add to favorites">
+                    <i class="far fa-star"></i>
+                </button>
+                <div class="tool-header">
+                    <i class="fas fa-key"></i>
+                    <h3>JWT Decoder</h3>
+                </div>
+                <p>Decode and verify JWT tokens</p>
+            </div>
+
+            <!-- Regular Expression Tester -->
+            <div class="tool-card" data-tool="regex">
+                <button class="favorite-btn" title="Add to favorites">
+                    <i class="far fa-star"></i>
+                </button>
+                <div class="tool-header">
+                    <i class="fas fa-search"></i>
+                    <h3>RegEx Tester</h3>
+                </div>
+                <p>Test and validate regular expressions</p>
+            </div>
+
+            <!-- Time Converter -->
+            <div class="tool-card" data-tool="timeconverter">
+                <button class="favorite-btn" title="Add to favorites">
+                    <i class="far fa-star"></i>
+                </button>
+                <div class="tool-header">
+                    <i class="fas fa-clock"></i>
+                    <h3>Time Converter</h3>
+                </div>
+                <p>Convert between time formats and zones</p>
+            </div>
+
+            <!-- Code Beautifier -->
+            <div class="tool-card" data-tool="codebeautifier">
+                <button class="favorite-btn" title="Add to favorites">
+                    <i class="far fa-star"></i>
+                </button>
+                <div class="tool-header">
+                    <i class="fas fa-code"></i>
+                    <h3>Code Beautifier</h3>
+                </div>
+                <p>Format and beautify code in various languages</p>
+            </div>
+        </div>
+    </main>
+
+    <div id="tool-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modal-title"></h2>
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-body" id="tool-container">
+                <!-- Tool content will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <div id="shortcuts-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Keyboard Shortcuts</h2>
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="shortcuts-grid">
+                    <div class="shortcut-item">
+                        <kbd>/</kbd>
+                        <span>Focus search</span>
+                    </div>
+                    <div class="shortcut-item">
+                        <kbd>?</kbd>
+                        <span>Show shortcuts</span>
+                    </div>
+                    <div class="shortcut-item">
+                        <kbd>Esc</kbd>
+                        <span>Close modal</span>
+                    </div>
+                    <div class="shortcut-item">
+                        <kbd>T</kbd>
+                        <span>Toggle theme</span>
+                    </div>
+                    <div class="shortcut-item">
+                        <kbd>1</kbd> - <kbd>9</kbd>
+                        <span>Quick access tools</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Made with ❤️ for developers</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
